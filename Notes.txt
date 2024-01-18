@@ -1,0 +1,183 @@
+History
+
+1- It was developed in 1991 via sun microsystem. james gosle who was one of the founders of java initially called it oke. simple, reliable and potable, first lang for www.
+it is an oop-object oriented lang. it is a proper object oriented lang. 
+source code ==>(compiler)==> byte code ==>(interpreter)==> machine code
+
+2- basic java prg is made up of 2 things: functions and classes.
+function: 
+object: it has methods and is a concept of oop, object are inheritance of classes(which are the blueprints), object allows u to modle real world concepts.
+
+3- public static void main: here static allows this function to be within the class and acts as an independent object. 
+                            All the program will start from main(entry point of the program), void- will not return anything.
+
+Naming conventions: classes: PascalConvention, functions: camelCase.
+
+Anatomy of Java:Document section, Package section, Import statement, Interface statement, Class section, main method
+Data type: premitive and non premitive datatype
+formula to calculate the value of the premitive datatype- -(2^(8*n))/2 to (2^(8*n))/2 - 1      n=no of bites it take
+in java char takes 2 bytes as it supports ascii as well as the usicode char
+
+int a = 40;
+float b = 40.55;
+hasNextInt ==> will give true if next number is an int
+b= byte, s= short, i= int, f= float, l= long, c= chat,
+Resulting datatypes after arthmetic operation: b+s = int, s+i = int, l+f = float, i+f = float, c+i/s = int, d+l/f = double 
+
+METHODS in java:
+1- use to make your code less bulky
+2- method is a funciton written inside a class(function and methods can be used iterchangebly). MEthod is a function written insidea  class.
+    Syntax=> datatype <fun name>(){----}
+            static int logic(int a,int b){-----}
+3- using static is nessary as only static methods can be called from static method, use to associate a method with the class and not with the object.
+4- while passing an object or an array to a method it will change/modifie it. 
+
+METHOD OVERLOADING: two/more methods can have same name but different parameters
+Variable Arguments(varargs): ex= ...arr => to pass collective obj as single once
+
+DRY - do not repeat yourself
+Class: bluprint for creatig an object
+Object: object is an instance of a class, represent a real world entity.
+
+OOP:
+1- Access Modifier: public, private, protected, default
+2- Getters - gets a value setters - sets a value.
+3- Inheritance - use extend keyword(to make a class derived) - multipel inheritance is not allowed in java
+4- Constructor Overloading - when there are more then one constructore
+5- Method Overriding - if the child class implements the same method present in the parent class again, its called method Overriding.
+6- Mehtod Overloading - two or more methods in the same class with same names but different parameters
+7- Dynamic MEthod Dispatch - super=1,2 sub=2(Overriding),3 ==>> sup obj = new sub,   can call a sup method but not a sub one,  sub obj = new sup==>not right
+8- Nested class are static classes,while inner classes are non-static - defining classes inside another classes, its used to group classes, outer class can only be public, it helps in encapsulation.
+Nested class - these class can be called independently, can call all the static var of the parent class,but cant access non static once.
+Inner class - these class need the obj of the parent class to be called, this can access all static,non-static even private etc. They are of three types: Inner class, Method local, Anonymous Inner class
+
+Abstract - Does not have a physical existance
+1- Abstract Method = Declared without an implementation
+2- Abstract class = class contatining an Abstract method, it can not have an object class, abstract class can be extend either by Overriding all the Overriding method or by making the extended class an abstract one, via abstract classes we can make/drive other concrite classes,  
+3- Interface = group of related methods with empty bodies, we can make a new class via one or more Interface. unlike in abstraction we can not extend multiple classes at the same time, Interface is like classes but values in these interface is constant and can not be updated and all the methods must be implemented, interface methods are public by default
+extend class A implements interface one,two....
+Inheritance in interface:  when one interface inherites the methods from other interface 
+Polymorphism in interface:  [interfaceName] i1 = new [classname]  ==>> here we can only use the methods of the [interfaceName] interface
+
+==>> multiple inheritance is not allowed in java as it face issues when there exist methods with same signature in both the super class so it has Interface, hence we inherite from one class and use intrface to implement other methods
+
+PACKAGES:
+1- Java is a Hybraid Language as java is first compiled into bitcode/class code then interprited to the give the output. This bit code can be taken to any os for execution hence java is an platform independent Language.
+2- PACKAGES are use to group similar classes together, they also help in avoiding name conflict, there are of two type- Built in and user defined funcitons
+2- PACKAGES are use to group similar classes together, they also help in avoiding name conflict, there are of two type- Built in and user defined funcitons
+
+THREADS:
+1- Without Threads: Main -->> fun() -->> fun2() -->> END
+2- with Threads: Main + fun() + fun2() -->> END
+There are two ways to create THREADS: 1 - By extending Thread class(extends thread) 2- By implementing runnable interface(implement runnable)
+Threads are used for faster execution
+Thread LIECYCLE: 
+New -->> Runnable -->> running -->> Non-runnable -->> terminal
+Thread priority: 
+Middle(1) << normal(5) << Max(10)
+
+Try/Catch ==>> types of error: systax error=error due to wrong Syntax, logical error=prg not producing the right output, Runtime error=no data found or when wrong data is inputed.
+via try/catch we can catch multiple errors try{ } catch(IoException){ } catch(ArthmeticException){ } catch(Exception e){ }
+Nested Try-catch 
+Exception class - use to write our custom exception  
+finally block - use to write the code which is manditory to execute
+
+NOTE: for(eleType ele: array/collection){ }
+
+COLLECTION FRAMEWORK
+1- helps to write code quickly and effectively  
+2- used for effective storage and manipulation of data 
+3- some commonly used collection in java are: ArrayList, Set, stack, HashMap
+4- llection Hierarchy: Iterable -->> collection -->> etc
+5- 
+
+Array - has a fixed size insertion and deletion is tough 
+ArrayList - can be resized according to the space needed, used as an array 
+                exception: it is stored in heap and can only store obj
+LinkedList - uses individual object to store data and use pointer to point to the next object
+DequeArray - works like a dequeue.
+
+HASHING: techinique to convert keyvalue pair to index/indices
+Hash Collision == A hash collision in Java occurs when two or more distinct elements or keys map to the same hash value.
+Chain Hasing == Collision resolution techinique, in this we createa a list in the collision place and stores the address of the list pointing to the list of the array 
+Date and Time == Data in java is stored in form of a long number, keeps otrack of every milli-second spend(used very less in real lief), java assumes that the year started from 1900
+        System.out.println(System.currentTimeMillis());            //returns number of milllseconds, data store in form of a long number
+
+CLASSES: 
+1- Date Class, calander class, Gregorian class
+
+Some of the most used classes from the java.time package are: 
+1- local Date - represents a Date
+2- local Time - represents a time 
+3- local dateTime - represents a date and time 
+4- datetimeformatter - formatter for displaying and passing date-time object 
+
+Annotations: provides meta info about the class/method
+some common annotations are: 
+1- @Override
+2- @SuppressWarnings - to supress warnings
+3- @Deprecated - for deprecated methods
+4- @FunctionalInterface - use to ensure that an interface is a functional interface, functional interface in Java is an interface that contains only a single abstract method, known as a functional method.
+
+Lambda Expressions: Lambda expressions, introduced in Java 8, are a concise way to create and use anonymous functions with only one method.
+//CODE 
+// Traditional way using an interface and an anonymous class
+MathOperation addition = new MathOperation() {
+    @Override
+    public int operate(int a, int b) {
+        return a + b;
+    }
+};
+// Using a lambda expression-but it can only implement one fun.
+MathOperation additionLambda = (a, b) -> a + b;
+
+Anonymous Classes: creatina sudo class that can be used within a given class only 
+Java Generics: Generics in Java provide a way to create reusable classes, interfaces, and methods that can work with different data types while maintaining type safety.
+
+constructiong generic classes - a generic class is a class that can work with multiple data types while providing type safety.
+        Mygen<String> g1 = new Mygen(10, "Hello world");
+
+Binary Tree: In a standard binary tree, each node typically contains pointers only to its left child and right child.
+Threaded Binary Tree: In addition to left and right child pointers, each node in a threaded binary tree can have pointers to its in-order predecessor (thread to the predecessor) and in-order successor (thread to the successor). 
+
+Sorting: 
+1- bubble sort = Larger ele at the end - O(n^2)
+2- selection sort = smallest ele in the begining - O(n^2)
+3- insertion sort = have two parts sorted and unsorted, then take the unsorted and insert it in the sorted one - O(n^2)
+4- Merge sort = breaking an array into smaller one till there is only one ele in an array and then sorting them while mearging - O(nlog n)
+5- Quick sort = First we choise a pivot and then we do partition around it. pivot can be chosen in many ways we will choice the last ele to be the pivot. worse case(On^2) occurs when pivot is always smalest/largest ele, which happens whenever arr is sorted assending or decending 
+6- Count sort = O(n+k) k = not significant 
+7- Radix sort = O(n*w) here w = constant factor
+8- Heap sort = O(nlog n)
+
+Recursion
+ -->> recursion and iteratoin are almost used interchangebaly
+ 
+ FLOYD'S ALGORITHM/ HARE-TURTLE METHOD - used in the context of linked lists to detect cycles within the list, it has 2 pointer one will jump 1 and the other will jump 2 places
+
+ Binary Tree: 
+ level(1st is level 1) depth-level=depth
+ Traversal - Pre-order = root,left,right 
+             Post-order = left,right,root
+             In-order = left,root,right
+BST - Bianry search tree => left subtree < root
+                            right subtree > root    
+                            No duplicacy(by default) - but duplicacy is possible
+                            inorder gives sorted sequence
+                            it makes search efficient - O(H) we can use n but we say H-height
+                            
+Hashig: mainly used to reduce the time complexity and to write an efficient code
+1- Hash set - insertion/search/deletion - O(1)
+2- HashMap(like dictonary) - have a unique key with a non-unique key, 
+                            lambda = (no of nodes/size of arr) divided by Number of buckets, it should be less then k(threshold const.), if it gets bigger then it then we do re-hashing
+
+TRIE DS
+1- Also called prefix, digital search, retrival tree
+Mainly used when there are words or char involved.
+trie is tree only butit is a k-ary-tree as it can have multiple nodes attached to it.
+search complexity - o(l) - l=length of words
+root node is always an empty node
+It stores char of a word and mark end of char when the word ends
+
+                               
+             
